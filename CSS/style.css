@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/4275561/pexels-photo-4275561.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    width: 100vw;
+    height: 100vh;    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Paytone One', sans-serif;
+    color: hsla(209, 12%, 58%, 0.7);
+    font-size: 80px;
+    text-align: center;
+    cursor: default;   
+    max-width: 85vw;
+    /*mix-blend-mode: multiply; //influeces blending under other objects */
+}
+
+b {
+    color: rgba(48, 53, 58, 0.7);
+    font-family: 'Paytone One', sans-serif; 
+}
+
+button {
+    padding: 0 35px;
+    max-width: 90vw;
+    height: 70px;
+    position: absolute;
+    top: calc(75vh - 35px);
+    color: #f04d42;
+    text-transform: uppercase;
+    font-weight: bold;    
+    font-size: 20px;
+    border: 3px solid #f04d42;
+    border-radius: 35px;
+    opacity: .8;
+    background-color: #fff;
+    box-shadow: 0px 0px 7px 1px hsla(0, 0%, 0%, 0.25);
+    cursor: pointer;  
+    outline: none; /* remove outer line when clicked -add other style in js when onclick*/
+}
+
+button:hover {
+   /*background-color: #f04d42;*/
+    color: hsl(0, 0%, 96%);
+}
+
+#details {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+    padding: 20px;
+    color: hsla(209, 12%, 40%, 1);
+    font-size: 1.3rem;
+    border: 2px solid hsla(209, 12%, 40%, 1);;
+    background-color: hsla(0, 0%, 100%, 0);    
+    backdrop-filter: blur(8px); /* check why not workin*/
+}
+ 
+
+#info {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 1100px) {
+    #details {
+        position: fixed;
+        top: 0px;
+        left: calc(50vw - 200px);
+        max-width: 400px;
+        max-height: fit-content;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #details {
+        position: fixed;
+        top: 0px;
+        left: inherit;
+        width: calc(100% - 30px);
+        margin: 15px 0 0 0;
+        max-height: fit-content;
+
+    }
+
+@media screen and (max-width: 365px) {
+    h1 {
+        font-size: 38px;
+    }
+}
+
